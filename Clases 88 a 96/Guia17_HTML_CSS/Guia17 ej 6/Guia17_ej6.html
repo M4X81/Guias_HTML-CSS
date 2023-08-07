@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<!--6. Por último, vamos a crear un formulario para registrar un usuario que se vea de la 
+siguiente manera:-->
+
+<body>
+    <header>
+        <h1 align="center"><span style="font-family:'Lucida Sans', 'Lucida Sans Regular', 
+'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Registrar un usuario</span></h1>
+    </header>
+    <main>
+        <div class="campo">
+            Nombre del usuario <br>
+            <!--<label for="nombre">Nombre del usuario</label> -->
+            <input type="text" name="nombre">
+        </div>
+
+        <div class="campo2">
+            Contraseña del usuario <br>
+            <!--<label for="pass">Contraseña del usuario</label>-->
+            <input type="password" name="pass">
+        </div>
+
+        <div class="campo3">
+            Edad del usuario <br>
+            <input type="number" name="age">
+        </div>
+
+        <div class="campo4">
+            Fecha de nacimiento <br>
+
+            <input type="date" name="time">
+        </div>
+        <div class="campo5">
+            Sexo del usuario <br>
+            <input type="radio" name="sexo" value="1">Hombre
+            <br>
+            <input type="radio" name="sexo" value="2">Mujer
+            <br>
+            <input type="radio" name="sexo" value="3">Prefiero no decir
+            <br>
+        </div>
+        <div class="pais">
+            <label>
+                País nacimiento del usuario 
+            </label> <br>
+            <select name="pais">
+                <option>Argentina</option>
+                <option>Brasil</option>
+                <option>Chile</option>
+                <option>Uruguay</option>
+                <option>Alemania</option>
+                <option>Australia</option>
+                <option>Austria</option>
+                <option>Bélgica</option>
+                <option>Canadá</option>
+                <option>China</option>
+                <option>Colombia</option>
+                <option>Corea del Sur</option>
+                <option>Dinamarca</option>
+                <option>Egipto</option>
+                <option>Emiratos Árabes Unidos</option>
+                <option>España</option>
+                <option>Estados Unidos</option>
+                <option>Finlandia</option>
+                <option>Francia</option>
+                <option>Grecia</option>
+                <option>Holanda</option>
+                <option>Hungría</option>
+                <option>India</option>
+                <option>Indonesia</option>
+                <option>Italia</option>
+                <option>Japón</option>
+                <option>México</option>
+                <option>Noruega</option>
+                <option>Nueva Zelanda</option>
+                <option>Perú</option>
+                <option>Polonia</option>
+                <option>Portugal</option>
+                <option>Rusia</option>
+                <option>Singapur</option>
+                <option>Suecia</option>
+                <option>Suiza</option>
+                <option>Tailandia</option>
+                <option>Turquía</option>
+                <option>Ucrania</option>
+                <option>Venezuela</option>
+                <option>Vietnam</option>
+                <option>Arabia Saudita</option>
+                <option>Malasia</option>
+                <option>Rumania</option>
+                <option>Israel</option>
+                <option>Irlanda</option>
+                <option>Pakistán</option>
+                <option>Egipto</option>
+            </select>
+            <br>
+        </div>
+
+    </main>
+    <footer>
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar</button>
+    </footer>
+</body>
+
+</html>
