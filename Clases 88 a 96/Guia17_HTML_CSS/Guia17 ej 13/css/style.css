@@ -1,0 +1,13 @@
+body {
+    background-color: antiquewhite;
+}
+
+.formulario {
+    background-color: burlywood;
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 60%;
+    margin-top: 50px;
+    margin-left: 20px;
+    padding: 20px;
+}
