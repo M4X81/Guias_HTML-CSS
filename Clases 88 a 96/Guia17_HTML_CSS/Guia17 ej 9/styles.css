@@ -1,0 +1,43 @@
+#titulo{
+    color: rgb(57, 107, 107);
+}
+#subtitulo{
+    color: blue;
+}
+.especial{
+    color: orange;
+  }
+.destacado{
+    color:purple;
+}
+.A{
+    color : red
+}
+.B{
+    color: blue;
+}
+.C{
+    color: green;
+  }
+table {
+    border-collapse: collapse;
+    width: auto;
+    border: 2px solid #000000;
+  }
+  
+  th, td {
+    border: 2px solid #000000;
+    padding: 8px;
+    text-align: left;
+    width: auto;
+  }
+  #adicional{
+    color: olive;
+  }
+ #especial{
+    color: fuchsia;
+ }
+ #link{
+    color: green;
+ }
+ 
