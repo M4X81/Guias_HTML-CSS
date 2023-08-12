@@ -1,0 +1,40 @@
+body{
+  background-color: bisque;
+}
+
+.lista-viñetas ul {
+  list-style: none;
+  margin: 25;
+  padding: 25;
+}
+
+.lista-viñetas li::before {
+  font-family: 'Material Icons';
+  content: "\e86c";
+  position: relative;
+  left: 0;
+}
+
+
+.lista-enlaces li::before {
+  font-family: 'Material Icons';
+  content: "\e8b6";
+  position: relative;
+  left: 0;
+}
+.lista-enlaces ul {
+  list-style: none;
+  margin: 25;
+  padding: 25;
+}
+
+.lista-enlaces a {
+  text-decoration: none;
+  color: #333;
+}
+
+.lista-enlaces a:hover {
+  background-color: rgba(102, 102, 133, 0.172);
+  text-decoration: underline;
+  color: #0066cc;
+}

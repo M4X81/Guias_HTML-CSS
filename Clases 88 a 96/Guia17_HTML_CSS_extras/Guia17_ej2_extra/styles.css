@@ -1,0 +1,36 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #d6b0b0, #724343);
+}
+
+table {
+    background-color: rgb(255, 255, 255);
+    border-collapse:collapse;
+    min-width: 60%;
+    margin-top: 20px;
+}
+th, td {
+    border: 3px solid #333; 
+    padding: 8px; 
+  }
+th.column1,td.column1 {
+    text-align: left;
+}
+
+.fila-a {
+    background-color: yellow;
+}
+
+.fila1 {
+    background-color: #6c6a6a;
+}
+
+.column1 {
+    background-color: #aad0f5;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EjercicioFormularioHTMLQA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div class="container mt-5">
+  <div id="liveAlertPlaceholder" style="width: 60%;"></div>
+</div>
+    <div class="container mt-2" style="justify-content: center;">
+      <div class="mb-4" style="background-color: #eaeaea; padding: 20px">
+      <h3 class="mb-4">Formulario de suscripción</h3>
+      <p>Se nos ha encomendado hacer un caso de pruebas sobre un formulario de registro para una suscripción a una pagina que te envía quesos todos los meses a tu domicilio para que pruebes. 
+        Esta suscripción es paga, por lo que tenemos que dejar que el usuario tenga todos los métodos de pago necesarios para elegir y que pueda ingresar los datos de dicho método de pago. 
+        Además, al ser paga solo es para gente mayor a 18 años. </p>
+
+      <p> Pensar qué campos son cruciales para que este formulario esté completo y con un funcionamiento correcto de cada campo. </p>
+      </div>
+    <form class="row g-3" method="GET">
+      <div class="col-md-6">
+        <label for="inputNombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" placeholder="Ingrese su nombre" aria-label="Nombre" name="nombre" maxlength="5" onkeyup="this.value = this.value.toLowerCase();" required>
+ 
+      </div>
+      <div class="col-md-6">
+        <label for="inputApellido" class="form-label">Apellido</label>
+        <input type="password" class="form-control" placeholder="Ingrese su apellido" aria-label="Apellido" id="pwd" name="apellido"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos un numero, una letra en mayusculas, una en minusculas, y ser de un minimo de 8 caracteres." required>
+        
+      </div>
+      <div class="col-md-6">
+        <label for="inputEdad" class="form-label">Edad</label>
+        <input type="number" class="form-control" placeholder="Ingrese su edad" aria-label="Edad" name="edad"
+        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="1">
+       
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail" class="form-label">Email</label>
+        <input type="text" class="form-control" placeholder="Ingrese un mail de contacto" aria-label="Email" name="email" onkeyup="this.value = this.value.toUpperCase();" id="mail" name="mail"
+        pattern="^[a-zA-Z0-9]+@GMAIL\.COM$" title="Su mail debe tener el arroba y ser gmail.">
+   
+      </div>
+        <div class="col-md-6">
+          <label for="inputState" class="form-label">Seleccione su metodo de pago </label>
+          <select id="inputState" class="form-select" multiple>
+            <option selected>Elija...</option>
+            <option>Efectivo</option>
+            <option>Billetera virtual</option>
+            <option>Criptomonedas</option>
+            <option>NFT</option>
+          </select>
+         
+        </div>
+        <div class="col-md-6">
+          <label for="inputFecha" class="form-label">Fecha vencimiento tarjeta</label>
+          <input type="date" class="form-control" placeholder="Ingrese su fecha" aria-label="Fecha" min="1997-01-01" max="2001-12-31" required>
+          
+        </div>
+        <div class="col-md-8">
+        <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-8 pt-0">¿Desea suscribirse a nuestros mails para recibir promociones?</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                <label class="form-check-label" for="gridRadios1">
+                  Si
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          
+        </div>
+        <div class="col-md-6">
+          <label for="inputDocumento" class="form-label">¿Quieres dejar algun comentario?
+          </label>
+          <textarea class="form-control" id="documento" name="documento" placeholder="Deje aqui sus comentarios" id="floatingTextarea"  disabled ></textarea>
+        </div>
+        <div class="col-12">
+        <button type="reset" class="btn btn-primary" style="margin-right: 30px;">Registrarse</button>
+        <button type="submit" class="btn btn-primary">Restaurar todos los campos</button>
+        </div>
+        
+        <div class="col-md-6" style="margin-bottom: 50px;">
+          <label for="inputEdad" class="form-label">Documento de identidad</label>
+          <input id="dni" name="dni" type="text" class="form-control" placeholder="Ingrese su documento" pattern="(?=.*\.)(?=.*[0-9])" title="Su documento debe tener puntos"
+           required>
+          
+        </div>
+    </form>
+      </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -40,4 +40,8 @@ table {
  #link{
     color: green;
  }
+
+ .list_group li:before{
+  content: "U+1F449";
+ }
  
