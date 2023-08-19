@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Area y perimetro</title>
+</head>
+<!--2. Conocido el número en matemática PI π, pedir al usuario que ingrese el valor del radio 
+de una circunferencia y calcular y mostrar por pantalla el área y perímetro. Recuerde que 
+para calcular el área y el perímetro se utilizan las siguientes fórmulas: 
+area = PI * radio2 
+perimetro = 2 * PI * radio -->
+<body>
+    <header>
+<h2>Calculo de área y perímetro</h2>
+    </header>
+    <main>
+
+    </main>
+    <footer></footer>
+    <script>
+const PI  = 3.141592653589793;
+let radio = prompt("Ingrese el radio de la circunferencia para calcular su área y perímetro")
+let area = PI * (radio ** 2);
+let perimetro = 2*PI*radio;
+let mensaje = "El área de la circunferencia es " + area + " y el perimetro es:  " + perimetro;
+alert(mensaje);
+
+    </script>
+</body>
+</html>

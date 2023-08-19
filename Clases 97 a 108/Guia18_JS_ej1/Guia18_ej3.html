@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Ejercicio 3</title>
+</head>
+<!--3. Escriba un programa en donde se pida la edad del usuario. Si el usuario es mayor de 
+edad se debe mostrar un mensaje indicándolo. -->
+<body>
+    <header>
+        <h2>Consulta de edad usuario</h2>
+    </header>
+<main></main>
+<footer></footer>
+<script>
+let edad = prompt(" Ingrese su edad: ")
+let respuesta;
+let mensaje;
+let correcto= true;
+if(edad < 18 ){
+    respuesta=" menor. ";
+}else if(edad >= 18){
+    respuesta = " mayor.";
+}else{
+    correcto= false; 
+    mensaje= "ingrese un valor valido."; 
+}
+if(correcto){
+    mensaje= "Su edad es " + edad + " por lo tanto usted es " + respuesta
+}
+
+
+alert(mensaje);
+</script>
+</body>
+</html>

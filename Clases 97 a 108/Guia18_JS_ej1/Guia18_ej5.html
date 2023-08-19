@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Ejercicio 5</title>
+</head>
+<!--5. Construir un programa que simule un menú de opciones para realizar las cuatro 
+operaciones aritméticas básicas () con dos valores 
+numéricos enteros. El usuario, además, debe especificar la operación con el primer 
+carácter de la operación que desea realizar: ‘S' o ‘s’ para la suma, ‘R’ o ‘r’ para la resta, ‘M’ 
+o ‘m’ para la multiplicación y ‘D’ o ‘d’ para la división. -->
+
+<body>
+<main>
+    <h2 align="center">Operaciones</h2>
+</main>
+
+    <script>
+        let n1 =parseInt (prompt("Ingrese un número entero"));
+        let n2 =parseInt(prompt("Ingrese otro...")); 
+        let opcion = prompt(`Ingrese la operación: 
+                                                    S = Suma 
+                                                    R = Resta 
+                                                    M = Multiplicación
+                                                    D = División`).toUpperCase();
+
+        switch (opcion) {
+            case 'S':
+                alert("El resultado de la suma es: " + (n1+n2));
+                break;
+            case 'R':
+            alert("El resultado de la resta es: " + (n1-n2));
+                break;
+            case 'M':
+            alert("El resultado de la multiplicación es: " + (n1*n2));
+                break;
+            case 'D':
+            alert("El resultado de la división es: " + (n1/n2));
+                break;
+
+            default:
+                break;
+        }
+
+    </script>
+</body>
+
+</html>
