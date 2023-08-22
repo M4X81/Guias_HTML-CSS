@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Ejercicio 8</title>
+</head>
+<!--8. Escribir un programa que lea números enteros hasta teclear 0 (cero). Al finalizar el 
+programa se debe mostrar el máximo número ingresado, el mínimo, y el promedio de 
+todos ellos. -->
+
+<body>
+    <main>
+<h2>Números</h2>
+    </main>
+    <script>
+        var maximo;
+        var minimo;
+        var promedio;
+        var suma = 0;
+        var contador = 0;
+        var numeros;
+
+        while (numeros != 0) {
+            numeros = parseInt(prompt("Ingrese números enteros ó 0(cero) para finalizar"));
+            if (numeros == 0) {
+                break;
+            }
+            suma += numeros;
+            contador++;
+            if (contador == 1) {
+                maximo = numeros;
+                minimo = numeros;
+            }
+            if (numeros > maximo) {
+                maximo = numeros;
+            }
+            if (numeros < minimo) {
+                minimo = numeros;
+            }
+        }
+
+        promedio = suma / contador;
+
+        var mensaje = `El máximo numero ingresado es: ${maximo}
+El mínimo ingresado es: ${minimo}
+El promedio es: ${promedio}
+La cantidad de números ingresados fue: ${contador}`;
+        
+                       alert(mensaje);
+
+
+
+    </script>
+</body>
+
+</html>

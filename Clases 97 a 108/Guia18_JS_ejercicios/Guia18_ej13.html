@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Ejercicio 13</title>
+</head>
+<!--13. Crear un objeto persona, con las propiedades nombre, edad, sexo ('H' hombre, 'M' mujer, 
+'O' otro), peso y altura. A continuación, muestre las propiedades del objeto JavaScript.-->
+
+<body>
+    <header>
+        <h2>Objetos</h2>
+    </header>
+    <main></main>
+    <footer></footer>
+    <script>
+        let nombre = prompt("ingrese el nombre")
+        let edad = prompt("ingrese la edad");
+        let sexo = prompt(`Ingrese sexo:
+ "H" para hombre
+ "M" para mujer`).toUpperCase();
+
+        const persona = {
+            nombre: nombre,
+            edad: parseInt(edad),
+            sexo: sexo
+        };
+        let sx;
+        if (persona.sexo == "H") {
+            sx = "Hombre";
+
+        } else if(persona.sexo=="M") {
+            sx = "Mujer";
+        }else{
+            sx="Indefinido"
+        }
+
+        const mensaje = `
+Nombre: ${persona.nombre}
+Edad: ${persona.edad}
+Sexo: ${sx}
+`;
+        alert(mensaje);
+
+    </script>
+</body>
+
+</html>

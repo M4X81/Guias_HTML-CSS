@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Ejercicio 9</title>
+</head>
+<!--9. Realizar un programa que pida una frase y el programa deberá mostrar la frase con un 
+espacio entre cada letra. La frase se mostrara así: H o l a. Nota: recordar el 
+funcionamiento de la función Substring(). -->
+
+<body>
+    <header>
+        <h2>Frases</h2>
+    </header>
+    <main></main>
+    <footer></footer>   
+    <script>
+let cadena = prompt("ingrese texto o frase a la cual se agregarán espacios intermedios");
+let espacios="";
+for (let i = 0; i < cadena.length; i++) {
+    espacios += cadena[i];
+    if (i<cadena.length -1) {
+        espacios += " ";
+    }
+    
+}
+alert(espacios);
+    </script>
+</body>
+
+</html>

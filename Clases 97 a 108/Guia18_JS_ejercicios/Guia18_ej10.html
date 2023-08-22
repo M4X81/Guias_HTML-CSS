@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Ejercicio 10</title>
+    <!--10. Escribir una función flecha que reciba una palabra y la devuelva al revés. 
+-->
+</head>
+<body>
+    <header><h2>Cadenas invertidas con función Flecha</h2></header>
+<main></main>
+<footer></footer>
+<script>
+let cadena= prompt("Ingrese una palabra o frase para invertir el orden");
+const funcInvertir = cadena => {
+let cadenaInvert="";
+for (let i = cadena.length -1; i >=0; i--) {
+    cadenaInvert += cadena[i];   
+}
+return cadenaInvert;
+}
+alert(funcInvertir(cadena));
+</script>
+</body>
+</html>
