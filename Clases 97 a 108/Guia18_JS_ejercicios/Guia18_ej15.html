@@ -12,15 +12,56 @@ con la propiedad radio. Nota: Cree dos métodos para calcular el área y el per�
 radio del círculo lo proporcionará el usuario-->
 <body>
     <header><h2>Area y perímetro</h2></header>
-<main></main>
-<footer></footer>
-<script>
-
-
-
-
-
-</script>
+    <body>
+        <main>
+            <h1>Calculadora de Círculo</h1>
+            <label for="radio">Ingrese el radio del círculo:</label>
+            <input type="number" id="radio">
+            <button onclick="calcularAreaYPerimetro()">Calcular</button>
+            <p id="resultado"></p>
+        </main>
+        <script>
+            function calcularAreaYPerimetro() {
+                const radio = parseInt(document.getElementById("radio").value);
+    
+                if (isNaN(radio) || radio <= 0) {
+                    document.getElementById("resultado").textContent = "Ingrese números enteros.";
+                } else {
+                    const circulo = {
+                        radio: radio,
+                        calcularArea: function() {
+                            return Math.PI * this.radio * this.radio;
+                        },
+                        calcularPerimetro: function() {
+                            return 2 * Math.PI * this.radio;
+                        }
+                    };
+    /*para mostrar la cantidad de decimales que yo quiero aca se usa el .toFixed(aca la cant de decim q quiero)
+    que seria lo q en java era el String.format("%.2f", num) q seleccionas cuantos decimales queres q se muestren.
+    esto no esta en la guia*/
+                    const area = circulo.calcularArea().toFixed(2);
+                    const perimetro = circulo.calcularPerimetro().toFixed(2);
+    
+                    const mensaje = `
+                    Radio del círculo: ${circulo.radio} 
+                    Área: ${area}
+                    Perímetro: ${perimetro}
+                    `;
+    
+                    document.getElementById("resultado").textContent = mensaje;
+                }
+            }
+            /*esto es para que me tome el enter tambien para activar el boton*/
+            document.getElementById("radio").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                calcularAreaYPerimetro();
+            }
+        });
+        /* despues x ahi agregue mas labels con inputs para que los resultados se vean en cuadros de dialogo y 
+        algun div con css para que parezca calculadora(si me sobran clases)*/
+        </script>
+        
+    </body>
 
 </body>
 </html>
