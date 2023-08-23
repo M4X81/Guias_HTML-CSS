@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Ejercicio 16</title>
+</head>
+<!--16. Realizar un programa que rellene dos vectores al mismo tiempo, con 5 valores aleatorios 
+y los muestre por pantalla-->
+<body>
+    <header><h2 align="center">Vectores Random</h2></header>
+    <main>
+        <h1>A continuación se mostraran 2 vectores cargados de forma aleatoria</h1>
+        <button id="btn">Cargar vectores</button>
+        <ul id="v1">Vector 1
+
+        </ul>
+        <ul id="v2">Vector 2
+
+        </ul>
+    </main>
+    <script>
+const boton = document.getElementById("btn");
+const ulVec1 = document.getElementById("v1");
+const ulVec2 = document.getElementById("v2");
+
+function cargarVectores() {
+  const vector1 = [];
+  const vector2 = [];
+
+  for (let i = 0; i < 5; i++) {
+    const numRandom = Math.floor(Math.random() * 100) + 1;
+    const numRandom2 = Math.floor(Math.random() * 100) + 1;
+    vector1.push(numRandom);
+    vector2.push(numRandom2);
+  }
+
+  ulVec1.innerHTML = "Vector 1: " + vector1.join(", ");
+  ulVec2.innerHTML = "Vector 2: " + vector2.join(", ");
+}
+
+boton.onclick = cargarVectores;
+/*faltaria mejorar css*/
+    </script>
+</body>
+</html>
