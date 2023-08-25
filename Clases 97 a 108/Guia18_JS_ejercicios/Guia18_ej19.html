@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style2.css">
+    <title>Ejercicio 19</title>
+    <!--19. Realizar un programa en Java donde se creen dos arreglos: el primero será un arreglo A 
+de 50 números reales, y el segundo B, un arreglo de 20 números, también reales. El 
+programa deberá inicializar el arreglo A con números aleatorios y mostrarlo por pantalla. 
+Luego, el arreglo A se debe ordenar de menor a mayor y copiar los primeros 10 números 
+ordenados al arreglo B de 20 elementos, y rellenar los 10 últimos elementos con el valor 
+0.5. Mostrar los dos arreglos resultantes: el ordenado de 50 elementos y el combinado 
+de 20. -->
+</head>
+
+<body>
+    <header>
+        <h1>Arreglos Ejercicio 19</h1>
+    </header>
+    <main>
+        <main>
+
+            <button id="btn" type="button" class="btn btn-secondary btn-lg">Cargar array A</button>
+            <ul id="p1"></ul>
+
+            <button id="btn2" type="button" class="btn btn-secondary btn-lg">Cargar array B</button>
+            <ul id="p2"> </ul>
+        </main>
+    </main>
+    <footer></footer>
+    <script>
+        const boton = document.getElementById("btn");
+        const boton2 = document.getElementById("btn2");
+        const parrafo1 = document.getElementById("p1");
+        const parrafo2 = document.getElementById("p2");
+        let vectorOrd =[];
+        function arrayA() {
+            let vectorA = [];
+            /* for (let i = 0; i < 50; i++) {
+                 const random = Math.floor(Math.random() * 100 + 1);
+                 vectorA.push(random);
+             } 
+             con este for funciona, pero me da muchos números repetidos, asi que o los cargo en el while
+             y verifico que no se repitan o puedo ampliar el rango del random a 500 o x ahi*/
+            while (vectorA.length < 50) {
+                const random = Math.floor(Math.random() * 100 + 1);
+
+                if (!vectorA.includes(random)) {
+                    vectorA.push(random);
+                }
+            }
+           vectorOrd = vectorA.sort((a, b) => a - b);
+            parrafo1.innerHTML = "- Vector A: " + vectorOrd.join(", ");
+
+        }
+
+        function arrayB() {
+            const relleno = 0.5;
+            let vectorB = [];
+            vectorB = vectorOrd.slice(0, 10);
+            for (let i = vectorB.length; i < 20; i++) {
+                vectorB.push(relleno);
+            }
+            parrafo2.innerHTML = "- Vector B: " + vectorB.join(", ");
+        }
+        boton.onclick = arrayA;
+        boton2.onclick = arrayB;
+    </script>
+
+</body>
+
+</html>

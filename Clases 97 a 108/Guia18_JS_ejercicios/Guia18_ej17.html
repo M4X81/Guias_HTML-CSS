@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style2.css">
+    <title>Ejercicio 17</title>
+</head>
+<!--17. Realizar un programa que elimine los dos últimos elementos de un array. Mostrar el 
+resultado-->
+
+<body>
+    <header>
+        <h1>Arrays</h1>
+    </header>
+    <main>
+        <h1>A continuación cargo un array con números random</h1>
+        <button id="btn" type="button" class="btn btn-secondary btn-lg">Cargar array</button>
+
+        <ul id="p1"></ul>
+        <button id="btn2" type="button" class="btn btn-secondary btn-lg">Modificar array</button>
+        <ul id="p2"> </ul>
+    </main>
+    <footer></footer>
+    <script>
+        const boton = document.getElementById("btn");
+        const boton2 = document.getElementById("btn2");
+        const parrafo1 = document.getElementById("p1");
+        const parrafo2 = document.getElementById("p2");
+        let array=[];
+
+        function cargarArray() {
+            array = [];
+            for (let i = 0; i < 5; i++) {
+                const numRandom = Math.floor(Math.random() * 100) + 1;
+                array.push(numRandom);
+            }
+            parrafo1.innerHTML = "- Array: " + array.join(", ");
+        }
+
+        function modificarArray() {
+            array.splice(-2);
+            parrafo2.innerHTML = "- Array modificado: " + array.join(", ");
+        }
+
+        boton.onclick = cargarArray;
+        boton2.onclick = modificarArray;
+
+    </script>
+</body>
+
+</html>

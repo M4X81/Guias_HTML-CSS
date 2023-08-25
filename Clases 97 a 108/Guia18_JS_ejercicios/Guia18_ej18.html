@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Ejercicio 18</title>
+    <!--18. A partir del siguiente array: var valores = [true, 5, false, "hola", "adios", 2]:
+a) Determinar cual de los dos elementos de texto es mayor
+b) Utilizando exclusivamente los dos valores booleanos del array, determinar los 
+operadores necesarios para obtener un resultado true y otro resultado false
+c) Determinar el resultado de las cinco operaciones matemáticas realizadas con los 
+dos elementos numéricos-->
+</head>
+
+<body>
+    <header>
+        <h1 align="center">Ejercicios a , b y c</h1>
+        <h3>Dado el array : var valores = [true, 5, false, "hola", "adios", 2]: </h3>
+        <p>a) Determinar cual de los dos elementos de texto es mayor <br>
+            b) Utilizando exclusivamente los dos valores booleanos del array, determinar los
+            operadores necesarios para obtener un resultado true y otro resultado false <br>
+            c) Determinar el resultado de las cinco operaciones matemáticas realizadas con los
+            dos elementos numéricos</p>
+    </header>
+    <main>
+        <ul id="results"></ul>
+    </main>
+    <footer></footer>
+    <script>
+        var valores = [true, 5, false, "hola", "adios", 2];
+        var resultados = document.getElementById("results");
+
+        var texto1 = valores[3];
+        var texto2 = valores[4];
+        var compararTexto = "";
+
+        if (texto1.length > texto2.length) {
+            compararTexto = "'" + texto1 + "' es mayor que '" + texto2 + "' en términos de longitud.";
+        } else if (texto2.length > texto1.length) {
+            compararTexto = "'" + texto2 + "' es mayor que '" + texto1 + "' en términos de longitud.";
+        } else {
+            compararTexto = "Ambos textos tienen la misma longitud.";
+        }
+
+        resultados.innerHTML += "<li>" + compararTexto + "</li>";
+
+        var booleano1 = valores[0];
+        var booleano2 = valores[2];
+        var resultadoTrue = booleano1 && booleano2;
+        var resultadoFalse = booleano1 || booleano2;
+        resultados.innerHTML += "<li>Resultado True: (booleano1 && booleano2) " + resultadoTrue + "</li>";
+        resultados.innerHTML += "<li>Resultado False: (booleano1 || booleano2) " + resultadoFalse + "</li>";
+
+        var numero1 = valores[1];
+        var numero2 = valores[5];
+        var suma = numero1 + numero2;
+        var resta = numero1 - numero2;
+        var multiplicacion = numero1 * numero2;
+        var division = numero1 / numero2;
+        var modulo = numero1 % numero2;
+
+        resultados.innerHTML += "<li>Suma: " + suma + "</li>";
+        resultados.innerHTML += "<li>Resta: " + resta + "</li>";
+        resultados.innerHTML += "<li>Multiplicación: " + multiplicacion + "</li>";
+        resultados.innerHTML += "<li>División: " + division + "</li>";
+        resultados.innerHTML += "<li>Módulo: " + modulo + "</li>";
+    </script>
+</body>
+
+</html>

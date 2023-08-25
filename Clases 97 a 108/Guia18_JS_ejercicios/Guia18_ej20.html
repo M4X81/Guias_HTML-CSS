@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style2.css">
+    <title>Ejercicio 20</title>
+</head>
+<!--20. Realizar un programa que obtenga la siguiente matriz [[3], [6], [9], [12], [15]] y devuelve y 
+muestre el siguiente array [6, 9, 12, 15, 18]. -->
+
+<body>
+    <header><h1 align="center">Matrices y arreglos</h1></header>
+    <main>
+        <button id="btn" type="button" class="btn btn-secondary btn-lg">Cargar Matriz</button>
+        <ul id="p1"></ul>
+
+        <button id="btn2" type="button" class="btn btn-secondary btn-lg">Cargar array nuevo</button>
+        <ul id="p2"></ul>
+    </main>
+    <footer></footer>
+    <script>
+        const boton = document.getElementById("btn");
+        const boton2 = document.getElementById("btn2");
+        const parrafo1 = document.getElementById("p1");
+        const parrafo2 = document.getElementById("p2");
+
+        const matriz = [[3], [6], [9], [12], [15]];
+
+        function mostrarMatriz() {
+            parrafo1.innerHTML = "- Matriz : " + matriz.flat().join(", ");
+        }
+
+        function mostrarNuevoArreglo() {
+            const nuevoArray = [];
+
+            for (let i = 0; i < matriz.length; i++) {
+                const numero = matriz[i][0];
+                const nuevoNumero = numero + 3;
+                nuevoArray.push(nuevoNumero);
+            }
+
+            parrafo2.innerHTML = "- Nuevo Arreglo : " + nuevoArray.join(", ");
+        }
+
+        boton.onclick = mostrarMatriz;
+        boton2.onclick = mostrarNuevoArreglo;
+    </script>
+</body>
+
+</html>
