@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style2.css">
+    <title>Ejercicio 22</title>
+</head>
+<!--22. Escribir un programa de JavaScript que al clickear un botón muestre un mensaje a 
+elección.-->
+<body>
+    <header><h1 align="center">Ejercicio clickear boton</h1></header>
+<main>
+    <br>
+    <br>
+<p>Este es un programa que al presionar un botón realiza una acción</p>
+<br>
+<button id="btn" type="button" class="btn btn-secondary btn-lg">Presioname</button>
+        <ul id="p1"></ul>
+</main>
+<footer></footer>
+<script>
+        const boton = document.getElementById("btn");
+        const parrafo1 = document.getElementById("p1");
+function clickear(){
+    alert("Genial!!!Presionaste un triste botón...")
+    parrafo1.innerHTML = "Sólo era un botón :(" ;
+
+    document.body.style.backgroundColor = "red";
+}
+
+boton.onclick = clickear;
+</script>
+
+</body>
+</html>

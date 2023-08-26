@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style2.css">
+    <title>Ejercicio 21 (B)</title>
+</head>
+<!--21. Escribir un programa para obtener un array de las propiedades de un objeto Persona. 
+Las propiedades son nombre, edad, sexo ('H' hombre, 'M' mujer, 'O' otro), peso y altura. -->
+<body>
+    <header>
+        <h1>Ejercicio 21 Propiedades de Objetos</h1>
+    </header>
+    <script>
+        function Persona(nombre, edad, sexo, peso, altura) {
+            this.nombre = nombre;
+            this.edad = edad;
+            this.sexo = sexo;
+            this.peso = peso;
+            this.altura = altura;
+        }
+
+        const persona = new Persona('Chiquito', 20, 'H', 50, 150);
+
+        const propiedades = Object.entries(persona);
+        alert(propiedades);
+    </script>
+</body>
+
+</html>
