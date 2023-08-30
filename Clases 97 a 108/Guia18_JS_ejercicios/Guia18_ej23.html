@@ -1,18 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <main>
-        <p>Hey, you’re not permitted in there. It’s restricted. You’ll be deactivated for sure.. <br>
-        Don’t call me a mindless philosopher, you overweight glob of grease! Now come out before somebody sees you. <br>
-        Secret mission? What plans? What are you talking about? I’m not getting in there! I’m going to regret this. <br>
-        There goes another one. Hold you fire. There are no life forms. It must have been short-circuited. <br>
-        That’s funny, the  damage doesn’t look as bad from out here. Are you sure this things safe? Close up formation. You’d better let her loose. Almost there! I can’t hold them! It’s away! It’s a hit! Negative. Negative! It didn’t go in. It just impacted on the surface. Red Leader, we’re right above you. Turn to point… oh-five, we’ll cover for you. Stay there… I just lost my starboard engine. Get those plans? We intercepted no transmissions. Aaah….This is a consular ship. Were on a diplomatic mission. If this is a consular ship…were is the Ambassador? Commander, tear this ship apart until you’ve found those plans and bring me the Ambassador. I want her alive! There she is! Set for stun! She’ll be all right. Inform Lord Vader we have a prisoner. What a piece of junk. She’ll make point five beyond the speed of light. She may not look like much, but she’s got it where it counts, kid. I’ve added some special modifications myself. We’re a little rushed, so if you’ll hurry aboard we’ll get out of here. Hello, sir.</p>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style2.css">
 
+    <style>
+        .resaltado {
+            background-color: yellow;
+        }
+    </style>
+
+    <title>Ejercicio 23</title>
+</head>
+<!--23. Resalte todas las palabras de más de 8 caracteres en el texto del párrafo (con un fondo 
+amarillo, por ejemplo)-->
+
+<body>
+    <header>
+        <h1>Ejercicio 23</h1>
+    </header>
+    <main>
+        <h2>Resaltar palabras del texto</h2>
+        <p id="parrafo"> Hey, you’re not permitted in there. It’s restricted. You’ll be deactivated for sure.. 
+            Don’t call me a mindless philosopher, you overweight glob of grease! Now come out before somebody sees you.
+            Secret mission? What plans? What are you talking about? I’m not getting in there! I’m going to regret this.
+            There goes another one. Hold you fire. There are no life forms. It must have been short-circuited.
+            That’s funny, the damage doesn’t look as bad from out here. Are you sure this things safe? Close up
+            formation. 
+            You’d better let her loose. Almost there! I can’t hold them! It’s away! It’s a hit! Negative. Negative! It
+            didn’t go in. 
+            It just impacted on the surface. Red Leader, we’re right above you. Turn to point… oh-five, we’ll cover for
+            you. Stay there…
+            I just lost my starboard engine. Get those plans? We intercepted no transmissions. Aaah….This is a consular
+            ship. Were on a diplomatic mission.
+            If this is a consular ship…were is the Ambassador? Commander, tear this ship apart until you’ve found those
+            plans and bring me the Ambassador.
+            I want her alive! There she is! Set for stun! She’ll be all right. Inform Lord Vader we have a prisoner.
+            What a piece of junk. 
+            She’ll make point five beyond the speed of light. She may not look like much, but she’s got it where it
+            counts, kid. 
+            I’ve added some special modifications myself. We’re a little rushed, so if you’ll hurry aboard we’ll get out
+            of here. Hello, sir.
+        </p>
+
+        <button id="btn" type="button" class="btn btn-secondary btn-lg">Resaltar</button>
     </main>
+    <footer>
+    </footer>
+    <script>
+        const boton = document.getElementById("btn");
+        function resaltado() {
+            const parrafo = document.getElementById("parrafo");
+            const palabras = parrafo.textContent.split(" ");
+
+            const resaltar = palabras.map(palabra => {
+                if (palabra.length > 8) {
+                    return `<span class="resaltado">${palabra}</span>`;
+                }
+                return palabra;
+            }).join(" ");
+
+            parrafo.innerHTML = resaltar;
+        }
+
+
+
+        boton.onclick = resaltado;
+    </script>
 </body>
+
 </html>

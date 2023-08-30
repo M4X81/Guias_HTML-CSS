@@ -13,3 +13,23 @@ h1{
     margin-bottom: 10px;
     text-align: center;
 }
+
+.contenedor{
+    margin-top: 50px;
+    margin-left: 35px;
+}
+.inputContainer{
+   align-items: center;
+}
+
+#inputValue{
+    margin-left: 40px;
+}
+.btn{
+    margin-top: 20px;
+}
+
+#form1{
+    margin-top: 35px;
+    margin-left: 35px;
+}
