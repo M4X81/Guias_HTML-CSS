@@ -1,32 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="style2.css">
-    <title>Obtener nombre y apellido de form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="style2.css">
+  <title>Obtener nombre y apellido de form</title>
 </head>
 <!--25. Escriba una función de JavaScript para obtener los valores de Nombre y Apellido del 
 siguiente formulario.-->
+
 <body>
-  <header><h1>Formularios submit</h1></header>
-<form id="form1" onsubmit="obtenerValores()">
-Nombre: <input id="nombre" type="text" name="nombre" value="David"><br>
-Apellido: <input id="apellido" type="text" name="apellido" value="Beckham"><br>
-<br>
-<button type="submit" onclick="obtenerValores(event)">Enviar</button><br>
-</form>
+  <header>
+    <h1>Formularios submit</h1>
+  </header>
+  <main>
+    <form id="form1" onsubmit="obtenerValores()">
+      Nombre: <input id="nombre" type="text" name="nombre" value="David"><br>
+      Apellido: <input id="apellido" type="text" name="apellido" value="Beckham"><br>
+      <br>
+      <button type="submit" onclick="obtenerValores(event)">Enviar</button><br>
+    </form>
 
+    <div class="container-rta">
+      <ul id="ul"></ul>
+    </div>
 
+  </main>
+<footer>
 
-<script>
-function obtenerValores(event) {
-    event.preventDefault(); // Evita que el formulario se envíe automáticamente
-    var nombre = document.getElementById("nombre").value;
-    var apellido = document.getElementById("apellido").value;
-    alert("Nombre: "+nombre+"\nApellido: "+apellido);
-  }
-</script>
+</footer>
+
+  <script>
+    function obtenerValores(event) {
+      event.preventDefault(); // Evita que el formulario se envíe automáticamente
+
+      const nombreInput = document.getElementById("nombre");
+      const apellidoInput = document.getElementById("apellido");
+      const p1List = document.getElementById("ul");
+      const nombre = nombreInput.value;
+      const apellido = apellidoInput.value;
+
+      if (nombre !== "" && apellido !== "") {
+        const content = `Nombre: ${nombre}<br>Apellido: ${apellido}<br>`;
+        p1List.innerHTML += content;
+
+       // alert(`Nombre:  ${nombre} 
+//Apellido: ${apellido}`);
+        //vacio los inputs una vez que cargo el boton
+        nombreInput.value = "";
+        apellidoInput.value = "";
+      }
+    }
+  </script>
 </body>
+
 </html>

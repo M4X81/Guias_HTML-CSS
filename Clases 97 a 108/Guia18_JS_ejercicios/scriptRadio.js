@@ -52,3 +52,8 @@ function calcular() {
 }
 
 boton.onclick = calcular;
+inputValue.addEventListener("keyup", function(event) {
+  if (event.key === "Enter") {
+      boton.click();
+  }
+});
